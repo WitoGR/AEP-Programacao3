@@ -1,7 +1,7 @@
 import {Request, Response} from 'express'
 
 class UserController {
-    public async findUsers(req: Request, res: Response) {
+    public async findUser(req: Request, res: Response) {
         return res.json('Thiago Bussola')
     }
 
