@@ -11,7 +11,7 @@ export class Produto {
 
     public async writeProdutos(){
         try{
-            writeFile('produtoDataSource.json', JSON.stringify(this.dataSorce))
+            writeFile('produtoDataSource.json', JSON.stringify(this.dataSorce, null, 2))
         }
         catch(er){
             console.error('falha ao gravar', er)

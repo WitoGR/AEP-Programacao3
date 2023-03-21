@@ -16,7 +16,8 @@ export class ValorProduto{
         
         this.dataSorce.forEach(pro => {
             let valor_estoque = pro.preco * pro.qtde
-            let itens = [{"nome":pro.nome,"qtde":pro.qtde,"preco":pro.preco,"valor_estoque":valor_estoque}]
+            let itens = {"nome":pro.nome,"qtde":pro.qtde,"preco":pro.preco,"valor_estoque":valor_estoque}
+            //let itens = [{"nome":pro.nome,"qtde":pro.qtde,"preco":pro.preco,"valor_estoque":valor_estoque}]
             arr.push(itens)    
         });     
 
@@ -24,7 +25,7 @@ export class ValorProduto{
     }
 
     public async readValorProdutosDataSorce(){
-        const leProduto = readFile('produtoValoresDataSource.json','utf-8')
-        return leProduto
+        const leValor = readFile('produtoValoresDataSource.json','utf-8')
+        return leValor
     }
 }
