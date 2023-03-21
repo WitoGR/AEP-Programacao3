@@ -1,17 +1,6 @@
 import {writeFile, readFile} from 'fs/promises'
 import {produtos} from './../produtoData'
 import { Schema, model, Document } from 'mongoose'
-import valor from '../model/ValorSchema'
-
-const ProdutoSchema = new Schema({
-    nome: String,
-    qtde: Number,
-    preco: Number,
-    data_compra: Date,
-    data_entrega: Date
-},{
-    timestamps : true
-})
 
 export class Produto {
     private dataSorce = produtos
@@ -35,5 +24,3 @@ export class Produto {
     }
 
 }
-
-export default model('Produto', ProdutoSchema)
