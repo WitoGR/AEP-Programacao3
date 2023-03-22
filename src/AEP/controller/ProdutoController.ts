@@ -15,7 +15,7 @@ class ProdutoController {
     }
 
     public async findProduto(req: Request, res: Response){
-        return res.json(produtos)
+        return res.json(JSON.parse(await p.readProdutosDataSorce()))
     }
 
     public async makeStockProduto(req: Request, res: Response){
@@ -26,6 +26,10 @@ class ProdutoController {
     public async findStockProduto(req: Request, res: Response){
         console.log(await v.readValorProdutosDataSorce())
         return res.json(JSON.parse(await v.readValorProdutosDataSorce()))
+    }
+
+    public async reduceStockProduto(req:Request, res:Response){
+        return res.json(await v.findValorTotalStock())
     }
 }
 

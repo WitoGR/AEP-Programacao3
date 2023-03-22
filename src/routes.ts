@@ -18,7 +18,7 @@ routes.get('/produtos', produtoController.findProduto)
 routes.post('/produtos', produtoController.makeProduto)
 routes.get('/produtos-stock', produtoController.findStockProduto)
 routes.post('/produtos-stock', produtoController.makeStockProduto)
-//routes.post('/products', produtoController)
+routes.get('/products-stock-reduce', produtoController.reduceStockProduto)
 
 // 19 - exportar a constante routes
 export default routes
