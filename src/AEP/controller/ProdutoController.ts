@@ -24,7 +24,8 @@ class ProdutoController {
     }
 
     public async findStockProduto(req: Request, res: Response){
-        return res.json(v.readValorProdutosDataSorce())
+        console.log(await v.readValorProdutosDataSorce())
+        return res.json(JSON.parse(await v.readValorProdutosDataSorce()))
     }
 }
 

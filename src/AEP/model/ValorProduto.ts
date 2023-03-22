@@ -23,7 +23,7 @@ export class ValorProduto{
     }
 
     public async readValorProdutosDataSorce(){
-        const leValor = readFile('produtoValoresDataSource.json','utf-8')
+        const leValor = await readFile('produtoValoresDataSource.json','utf-8')
         return leValor
     }
 }

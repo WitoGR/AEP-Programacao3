@@ -8,7 +8,7 @@ export class Produto {
     public async getDataSource(){
         return this.dataSorce
     }
-
+ 
     public async writeProdutos(){
         try{
             writeFile('produtoDataSource.json', JSON.stringify(this.dataSorce, null, 2))
@@ -19,7 +19,7 @@ export class Produto {
     }
 
     public async readProdutosDataSorce(){
-        const leProduto = readFile('produtoDataSource.json','utf-8')
+        const leProduto = await readFile('produtoDataSource.json','utf-8')
         return leProduto
     }
 
