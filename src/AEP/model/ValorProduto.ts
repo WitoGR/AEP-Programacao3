@@ -11,13 +11,11 @@ export class ValorProduto{
     }
 
     public async insertPrecoProdutos(){
-        console.log("entrou")
-        const arr = [{}];
+        const arr = new Array();
         
         this.dataSorce.forEach(pro => {
             let valor_estoque = pro.preco * pro.qtde
             let itens = {"nome":pro.nome,"qtde":pro.qtde,"preco":pro.preco,"valor_estoque":valor_estoque}
-            //let itens = [{"nome":pro.nome,"qtde":pro.qtde,"preco":pro.preco,"valor_estoque":valor_estoque}]
             arr.push(itens)    
         });     
 
